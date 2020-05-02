@@ -1,36 +1,34 @@
-/*
- ##########################################
- #####   MultiProtocol nRF24L01 Tx   ######
- ##########################################
- #        by goebish on rcgroups          #
- #                                        #
- #   Parts of this project are derived    #
- #     from existing work, thanks to:     #
- #                                        #
- #   - PhracturedBlue for DeviationTX     #
- #   - victzh for XN297 emulation layer   #
- #   - Hasi for Arduino PPM decoder       #
- #   - hexfet, midelic, closedsink ...    #
- ##########################################
-
-
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License.
- If not, see <http://www.gnu.org/licenses/>.
- */
-
 #include <util/atomic.h>
 #include <EEPROM.h>
 #include "iface_nrf24l01.h"
+
+// ##########################################
+// #####   MultiProtocol nRF24L01 Tx   ######
+// ##########################################
+// #        by goebish on rcgroups          #
+// #                                        #
+// #   Parts of this project are derived    #
+// #     from existing work, thanks to:     #
+// #                                        #
+// #   - PhracturedBlue for DeviationTX     #
+// #   - victzh for XN297 emulation layer   #
+// #   - Hasi for Arduino PPM decoder       #
+// #   - hexfet, midelic, closedsink ...    #
+// ##########################################
+//
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License.
+// If not, see <http://www.gnu.org/licenses/>.
 
 
 // ############ Wiring ################
@@ -74,7 +72,7 @@ enum chan_order{
     AUX4,  // (CH8)  video camera
     AUX5,  // (CH9)  headless
     AUX6,  // (CH10) calibrate Y (V2x2), pitch trim (H7), RTH (Bayang, H20), 360deg flip mode (H8-3D, H22)
-    AUX7,  // (CH11) calibrate X (V2x2), roll trim (H7)
+    AUX7,  // (CH11) calibrate X (V2x2), roll trim (H7), emergency stop (Bayang, Silverware)
     AUX8,  // (CH12) Reset / Rebind
 };
 
